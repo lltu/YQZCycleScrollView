@@ -33,15 +33,20 @@
 3、加载轮换图片列表控件
     self.cycleScrollView = [[YQZCycleScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.f, 134)
                                                     withImageArray:self.marqueeImageArray];
-    self.cycleScrollView.cycleScrollViewDelegate = self;    
+   
+    self.cycleScrollView.cycleScrollViewDelegate = self;  
+    
     self.contentTableView.tableHeaderView = self.cycleScrollView;
 
 4、实现代理函数
 
 //广告图片点击
+
 - (void)cycleScrollViewDidClick:(YQZCycleScrollView *)cycleScrollView withIndex:(int)index
 {
+
     if (([self.marqueeImageArray count] == 0)||(index > [self.marqueeImageArray count]))
+    
     {
         return;
     }
