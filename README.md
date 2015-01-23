@@ -3,9 +3,11 @@
 
 # 使用方法
 
-1、定义YQZCycleScrollViewDelegate <YQZCycleScrollViewDelegate>
+1、定义YQZCycleScrollViewDelegate
+<YQZCycleScrollViewDelegate>
 
 2、定义滚动图片数组
+
 /*!
  @brief     存储轮换列表数据
  */
@@ -31,6 +33,7 @@
     }
 
 3、加载轮换图片列表控件
+
     self.cycleScrollView = [[YQZCycleScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.f, 134)
                                                     withImageArray:self.marqueeImageArray];
    
@@ -53,4 +56,5 @@
     
     YQZImageADModel *imageADModel = [self.marqueeImageArray objectAtIndex:index];
     //todo点击处理
+    
 }
