@@ -4,6 +4,7 @@
 # 使用方法
 
 1、定义YQZCycleScrollViewDelegate <YQZCycleScrollViewDelegate>
+
 2、定义滚动图片数组
 /*!
  @brief     存储轮换列表数据
@@ -29,15 +30,13 @@
         [self.marqueeImageArray addObject:model];
     }
 
-2、加载轮换图片列表控件
+3、加载轮换图片列表控件
     self.cycleScrollView = [[YQZCycleScrollView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 320.f, 134)
                                                     withImageArray:self.marqueeImageArray];
     self.cycleScrollView.cycleScrollViewDelegate = self;    
     self.contentTableView.tableHeaderView = self.cycleScrollView;
 
-3、实现代理函数
-
-#pragma mark - YQZCycleScrollViewDelegate -
+4、实现代理函数
 
 //广告图片点击
 - (void)cycleScrollViewDidClick:(YQZCycleScrollView *)cycleScrollView withIndex:(int)index
@@ -48,5 +47,5 @@
     }
     
     YQZImageADModel *imageADModel = [self.marqueeImageArray objectAtIndex:index];
-
+    //todo点击处理
 }
