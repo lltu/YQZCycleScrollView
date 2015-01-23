@@ -11,6 +11,7 @@
 /*!
  @brief     存储轮换列表数据
  */
+ 
 @property (nonatomic, strong) NSMutableArray *marqueeImageArray;
 
 在viewDidLoad中添加初始化
